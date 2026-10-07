@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { FormEvent, ReactNode } from 'react';
 import { Icon } from '../components/Icon';
+import churchLogo from '../../img/Logo_igreja.png';
 
 type Role = 'admin' | 'membro';
 type StatusMembro = 'pendente' | 'ativo' | 'inativo';
@@ -89,14 +90,15 @@ export function LoginPage({
         <div className='absolute w-80 h-80 rounded-full border border-white/8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' />
         <div className='absolute w-48 h-48 rounded-full border border-white/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' />
         <div className='relative z-10 flex flex-col items-center text-center px-10'>
-          <div className='w-16 h-16 rounded-2xl bg-[#C9A84C]/20 flex items-center justify-center mb-6'>
-            <Icon
-              name='cross'
-              className='w-8 h-8 text-[#C9A84C]'
+          <div className='w-16 h-16 rounded-2xl flex items-center justify-center overflow-hidden mb-6 bg-[#ac8b30]'>
+            <img
+              src={churchLogo}
+              alt='Logo da Igreja'
+              className='w-full h-full object-contain p-1'
             />
           </div>
           <h1 className='font-display text-white text-4xl font-bold leading-tight'>
-            Igreja Pentecostal
+            Ministério Pentecostal
             <br />
             <span className='text-[#C9A84C]'>Agua viva</span>
           </h1>
@@ -126,19 +128,20 @@ export function LoginPage({
 
       <div className='flex-1 flex flex-col items-center justify-center px-6 py-12'>
         <div className='lg:hidden flex flex-col items-center mb-10'>
-          <Icon
-            name='cross'
-            className='w-9 h-9 text-[#C9A84C]'
+          <img
+            src={churchLogo}
+            alt='Logo da Igreja'
+            className='w-10 h-10 object-contain'
           />
-          <h2 className='font-display text-[#1E3A5F] text-2xl font-bold mt-3'>
-            Igreja Pentecostal Agua viva
+          <h2 className='font-display text-[#1E3A5F] text-center text-2xl font-bold mt-3'>
+            Ministério Pentecostal Agua viva
           </h2>
         </div>
         <div className='w-full max-w-sm'>
-          <h2 className='font-display text-[#1C1917] text-2xl font-bold mb-1'>
+          <h2 className='font-display text-[#1C1917] text-center text-2xl font-bold mb-1'>
             Bem-vindo
           </h2>
-          <p className='text-[#7B6D5A] text-sm mb-8'>
+          <p className='text-[#7B6D5A] text-center text-sm mb-8'>
             Entre com suas credenciais para acessar
           </p>
           <form
@@ -305,9 +308,10 @@ export function SolicitarCadastroPage({
         <div className='bg-[#FFFEF9] rounded-2xl shadow-sm border border-[#E4D9C8] overflow-hidden'>
           <div className='bg-[#1E3A5F] px-8 py-6'>
             <div className='flex items-center gap-3 mb-2'>
-              <Icon
-                name='cross'
-                className='w-5 h-5 text-[#C9A84C]'
+              <img
+                src={churchLogo}
+                alt='Logo da Igreja'
+                className='w-5 h-5 object-contain'
               />
               <span className='text-[#C9A84C] text-xs font-bold tracking-widest uppercase'>
                 Igreja Pentecostal Agua viva
