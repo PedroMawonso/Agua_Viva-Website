@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { FormEvent, ReactNode } from 'react';
+import { Icon } from '../components/Icon';
 
 type Role = 'admin' | 'membro';
 type StatusMembro = 'pendente' | 'ativo' | 'inativo';
@@ -39,33 +40,6 @@ interface Notificacao {
   lida: boolean;
   data: string;
   membroId?: string;
-}
-
-const PATHS: Record<string, string> = {
-  cross: 'M12 2v20M2 12h20',
-  chevronRight: 'M9 18l6-6-6-6',
-  check: 'M20 6 9 17l-5-5',
-};
-
-function Icon({
-  name,
-  className = 'w-5 h-5',
-}: {
-  name: string;
-  className?: string;
-}) {
-  return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      stroke='currentColor'
-      strokeWidth='1.75'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      className={className}>
-      <path d={PATHS[name] ?? ''} />
-    </svg>
-  );
 }
 
 function Field({ label, children }: { label: string; children: ReactNode }) {
