@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Lora', Georgia, serif;
+  --font-sans: 'Nunito', system-ui, sans-serif;
+  --color-navy: #1E3A5F;
+  --color-navy-deep: #152B47;
+  --color-navy-mid: #244670;
+  --color-gold: #C9A84C;
+  --color-gold-pale: #FAF3E0;
+  --color-gold-light: #EDD99A;
+  --color-cream: #FAF7F2;
+  --color-warm: #FFFEF9;
+  --color-stone-warm: #7B6D5A;
+  --color-warm-border: #E4D9C8;
+  --color-ink: #1C1917;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+*:hover {
+  scrollbar-color: rgba(0, 0, 0, 0.12) transparent;
+}
+
+@media print {
+  body * { visibility: hidden; }
+  .print-card, .print-card * { visibility: visible; }
+  .print-card { position: fixed; top: 0; left: 0; }
+}
