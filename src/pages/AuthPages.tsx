@@ -100,10 +100,10 @@ export function LoginPage({
           <h1 className='font-display text-white text-4xl font-bold leading-tight'>
             Ministério Pentecostal
             <br />
-            <span className='text-[#C9A84C]'>Agua viva</span>
+            <span className='text-[#C9A84C]'>Água viva</span>
           </h1>
           <p className='text-white/50 mt-4 text-sm'>
-            Sistema de Gestão Eclesiástica
+            Sistema de Gestão de Igreja
             <br />
             Luanda, Angola
           </p>
@@ -134,7 +134,7 @@ export function LoginPage({
             className='w-10 h-10 object-contain'
           />
           <h2 className='font-display text-[#1E3A5F] text-center text-2xl font-bold mt-3'>
-            Ministério Pentecostal Agua viva
+            Ministério Pentecostal Água viva
           </h2>
         </div>
         <div className='w-full max-w-sm'>
